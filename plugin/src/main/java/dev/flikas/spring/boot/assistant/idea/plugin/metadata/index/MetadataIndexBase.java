@@ -166,13 +166,15 @@ abstract class MetadataIndexBase implements MetadataIndex {
         }
       });
     }
-    metadata.getProperties().forEach(p -> {
-      try {
-        add(p);
-      } catch (Exception e) {
-        LOG.warn("Invalid property " + p.getName() + " in " + source + ", skipped", e);
-      }
-    });
+    if (metadata.getProperties() != null) {
+      metadata.getProperties().forEach(p -> {
+        try {
+          add(p);
+        } catch (Exception e) {
+          LOG.warn("Invalid property " + p.getName() + " in " + source + ", skipped", e);
+        }
+      });
+    }
   }
 
 

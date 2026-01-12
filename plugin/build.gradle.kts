@@ -23,7 +23,7 @@ version = properties("plugin.version") + "+" + properties("plugin.since-build")
 plugins {
     idea
     java
-    id("org.jetbrains.intellij.platform") version "2.2.1"
+    id("org.jetbrains.intellij.platform") version "2.10.5"
     id("org.jetbrains.changelog") version "2.2.1"   // https://github.com/JetBrains/gradle-changelog-plugin
     id("io.freefair.lombok") version "8.10"
 }
@@ -54,7 +54,7 @@ repositories {
 
 dependencies {
     intellijPlatform {
-        create(properties("platform.type"), properties("platform.version"))
+        intellijIdea("2025.3")
 
         bundledPlugin("com.intellij.java")
         bundledPlugin("com.intellij.properties")

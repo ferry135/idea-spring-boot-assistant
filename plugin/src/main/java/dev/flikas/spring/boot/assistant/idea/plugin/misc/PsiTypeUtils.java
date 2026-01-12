@@ -104,8 +104,7 @@ public class PsiTypeUtils {
                 || isClassNameEquals(type, CommonClassNames.JAVA_NET_URL)
                 || isClassNameEquals(type, "java.net.InetAddress")
                 || isClassNameEquals(type, "org.springframework.core.io.Resource")
-                || isClassNameEquals(type, "org.springframework.http.MediaType")
-                || canConvertFromString(type)));
+                || isClassNameEquals(type, "org.springframework.http.MediaType")));
   }
 
 
